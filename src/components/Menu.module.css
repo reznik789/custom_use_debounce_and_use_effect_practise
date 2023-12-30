@@ -1,0 +1,35 @@
+.menu {
+  display: flex;
+  justify-content: flex-start;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+}
+
+.menuItem {
+  position: relative;
+  color: #343a40;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+  border: 1px solid #343a40;
+  padding: 5px 30px;
+  margin-right: 10px;
+}
+
+.menuItem:hover {
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.menuPopover__visible {
+  width: 200px;
+  height: 400px;
+  background-color: #f8f9fa;
+  position: absolute;
+  left: -1px;
+  top: 130%;
+}
+
+.menuPopover__hidden {
+  display: none;
+}

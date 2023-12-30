@@ -1,26 +1,6 @@
-import { useLayoutEffect, useMemo, useRef, useState, useEffect } from "react";
-import debounce from "lodash/fp/debounce";
-import "./App.css";
-
-type AnyFunction = (...args: any[]) => any;
-
-function useDebounce<TFunc extends AnyFunction>(
-  callback: TFunc,
-  timeout = 500,
-) {
-  const callbackRef = useRef(callback);
-  useLayoutEffect(() => {
-    callbackRef.current = callback;
-  }, [callback]);
-
-  return useMemo(
-    () =>
-      debounce(timeout, (...args: Parameters<TFunc>): ReturnType<TFunc> => {
-        return callbackRef.current(...args);
-      }),
-    [timeout],
-  );
-}
+import { useState, useEffect } from "react";
+import { useDebounce } from "./hooks/useDebounce";
+import Menu from "./components/Menu";
 
 function App() {
   const [state, setState] = useState(0);
@@ -39,7 +19,7 @@ function App() {
 
   return (
     <div>
-      <button onClick={onChange}>Click me</button>
+      <Menu />
     </div>
   );
 }
