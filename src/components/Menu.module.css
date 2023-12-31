@@ -21,15 +21,11 @@
   transition: background-color 0.3s ease;
 }
 
-.menuPopover__visible {
+.menuPopover {
   width: 200px;
   height: 400px;
   background-color: #f8f9fa;
   position: absolute;
   left: -1px;
   top: 130%;
-}
-
-.menuPopover__hidden {
-  display: none;
 }
