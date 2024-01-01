@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useDebounce } from "./hooks/useDebounce";
-import Menu from "./components/Menu";
+import Menu from "./components/Menu/Menu";
 
 function App() {
   const [state, setState] = useState(0);
